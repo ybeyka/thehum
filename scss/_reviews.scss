@@ -1,0 +1,94 @@
+@import "vars";
+
+.reviews {
+  background: url("../img/background/back-reviews.jpg") no-repeat center;
+  background-size: cover;
+  padding: 98px 0;
+  .title {
+    color: #fff;
+  }
+  &__container {
+    text-align: center;
+    color: #bbb;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 37px;
+    .icon_quotes {
+      width: 44px;
+      height: 31px;
+    }
+    .review {
+      line-height: 1.875;
+    }
+    .details {
+      .author {
+        font-weight: 700;
+        line-height: 1.69;
+        color: #18cfab;
+        text-transform: uppercase;
+      }
+      .profession {
+        font-size: 13px;
+        line-height: 2.08;
+      }
+    }
+    .avatar {
+      width: 167px;
+      height: 167px;
+      padding: 12px;
+      border-radius: 50%;
+      background-color: rgba($color: #1fdab5, $alpha: .2);
+      &__dots {
+        width: 71px;
+        height: 71px;
+        padding: 5px;
+      }
+      img {
+        @include img(100%, 100%);
+        border-radius: 50%;
+      }
+    }
+  }
+  .container__dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-top: 40px;
+    .reviews_dots {
+      width: 361px;
+      margin-left: 0;
+      margin-right: 0;
+      padding: 11px 0 0;
+      .swiper-slide {
+        transition: .1s ease-in;
+        cursor: pointer;
+        &:hover, &-thumb-active {
+          margin-top: -11px;
+        }
+      }
+    }
+    .reviews_dots__btn {
+      position: relative;
+      width: 31px;
+      height: 31px;
+      top: 11px;
+      --colorBackDots: rgba($color: #000, $alpha: .01);
+      --colorStrokeDots: #bbb;
+      --colorFillDots: #bbb;
+      transition: .1s ease-in;
+      &:hover {
+        --colorBackDots: #18cfab;
+        --colorStrokeDots: #18cfab;
+        --colorFillDots: #fff;
+      }
+      &--next {
+        transform: scaleX(-1);
+      }
+      &:after {
+        display: none;
+      }
+    }
+  }
+}

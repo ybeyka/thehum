@@ -1,0 +1,59 @@
+@import "vars";
+
+.main_screen {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: url("../img/background/back-main-screen.jpg") no-repeat center;
+  background-size: cover;
+  padding: 150px 0 20px;
+  color: #fff;
+  font-weight: 700;
+  line-height: 1.18;
+  text-align: center;
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 129px;
+    .item {
+      &__title {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        h1 {
+          font-size: 35px;
+          text-transform: uppercase;
+          span {
+            color: #18cfab;
+          }
+        }
+        h2 {
+          font-size: 78px;
+          text-transform: uppercase;
+        }
+        h3 {
+          color: #d4d4d4;
+          font-size: 34px;
+          font-weight: 400;
+        }
+      }
+      &.btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 26px;
+        a {
+          box-shadow: 0 -5px #fff;
+          &:last-child {
+            background-color: #00cbf6;
+          }
+        }
+      }
+    }
+  }
+}

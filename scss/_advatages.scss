@@ -1,0 +1,50 @@
+@import "vars";
+
+.advantages {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 362px;
+  background-color: #fff;
+  padding: 8px 0 7px;
+  .item {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 48px;
+    &__black {
+      background-color: #1c2a33;
+      color: #18cfab;
+      svg {
+        fill: #18cfab;
+      }
+    }
+    &__green {
+      background-color: #18cfab;
+      color: #fff;
+      svg {
+        fill: #fff;
+      }
+    }
+    .icon {
+      height: 98px;
+      &__1 {
+        width: 58px;
+      }
+      &__2 {
+        width: 93px;
+      }
+      &__3 {
+        width: 60px;
+      }
+      &__4 {
+        width: 99px;
+      }
+    }
+  }
+}

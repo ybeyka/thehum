@@ -1,0 +1,17 @@
+@mixin font ($name, $fileName, $fontWeight, $fontStyle: normal) {
+  @font-face {
+    font-family: $name;
+    src: url('../fonts/#{$fileName}.woff') format('woff'),
+    url('../fonts/#{$fileName}.woff2') format('woff2'),
+    url('../fonts/#{$fileName}.ttf') format('truetype');
+    font-weight: $fontWeight;
+    font-style: $fontStyle;
+  }
+}
+
+@mixin img ($maxWidth, $height: auto) {
+  max-width: $maxWidth;
+  width: 100%;
+  height: $height;
+  object-fit: cover;
+}

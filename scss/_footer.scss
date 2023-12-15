@@ -1,0 +1,20 @@
+@import "vars";
+
+footer {
+  background-color: #22353f;
+  color: #aeaeae;
+  font-size: 14px;
+  padding: 15px 0;
+  min-height: 121px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  p {
+    line-height: 1.857;
+    a {
+      color: #18cfab;
+      text-decoration: none;
+    }
+  }
+}

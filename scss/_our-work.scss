@@ -1,0 +1,136 @@
+@import "vars";
+
+.our_work {
+  background-color: #e9edef;
+  padding: 96px 0 99px;
+  nav {
+    margin-bottom: 71px;
+    text-align: center;
+    ul {
+      display: inline-grid;
+      grid-template-columns: repeat(5, minmax(77px, auto));
+      li {
+        background-color: transparent;
+        border: 1px solid #dadada;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 3;
+        color: #717171;
+        text-transform: capitalize;
+        padding: 0 15px;
+        cursor: pointer;
+        transition: .1s ease-in;
+        &:not(:last-child) {
+          border-right: none;
+        }
+        &:hover, &.active {
+          box-shadow: inset 1px 0 1px #18cfab,
+                      inset 0 1px 1px #18cfab,
+                      inset -1px 0 1px #18cfab,
+                      inset 0 -1px 1px #18cfab;
+        }
+        &.hover {
+          border-left-color: #18cfab;
+        }
+        &.active {
+          border-right-color: #18cfab;
+        }
+      }
+    }
+  }
+  .items {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    .item {
+      position: relative;
+      display: none;
+      &__active {
+        display: block;
+      }
+      img {
+        @include img(100%, 100%);
+      }
+      .info {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        z-index: -1;
+        border-top: 2px solid #18cfab;
+        background-color: #e9edef;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 7px;
+        text-align: center;
+        .icons {
+          margin-bottom: 28px;
+          a {
+            .icon {
+              width: 43px;
+              height: 43px;
+              --colorBackHover: none;
+              --colorGreen: #18cfab;
+              transition: .2s ease-in;
+            }
+            &:hover {
+              .icon {
+                --colorGreen: #fff;
+                --colorBackHover: #18cfab;
+              }
+            }
+          }
+        }
+        h3 {
+          font-size: 14px;
+          font-weight: 700;
+          line-height: 1.15;
+          color: #18cfab;
+          text-transform: uppercase;
+        }
+        p {
+          font-size: 12px;
+          color: #8a8a8a;
+          line-height: 1.15;
+        }
+      }
+      &:hover {
+        .info {
+          transition: .2s ease-in;
+          z-index: 1;
+          opacity: 1;
+        }
+      }
+    }
+  }
+  .btn {
+    margin-top: 70px;
+    a {
+      font-size: 14px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 16px;
+      &:before {
+        content: '';
+        position: relative;
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        background: url("../img/icons/icon-plus.png") no-repeat;
+        background-size: cover;
+        top: -1px;
+      }
+      &.download {
+        &:before {
+          background-image: url("../img/icons/icon-loading.gif");
+        }
+      }
+    }
+    &.hidden {
+      display: none;
+    }
+  }
+}
